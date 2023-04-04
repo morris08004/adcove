@@ -530,7 +530,6 @@ namespace wCWdrmApp
                 switch (vcAccion)
                 {
                     case "N":
-                        //comandoSQL.Parameters.Add("@Vehiculo", MySqlDbType.Int32).Value = 0;
                         comandoSQL.Parameters.Add("@proveedor", MySqlDbType.Int32).Value = piTaller;
                         comandoSQL.Parameters.Add("@vehiculo", MySqlDbType.Int32).Value = piVehiculo;
                         comandoSQL.Parameters.Add("@area", MySqlDbType.Int32).Value = piArea;

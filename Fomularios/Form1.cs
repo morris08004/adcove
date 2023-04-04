@@ -19,6 +19,8 @@ namespace wCWdrmApp
             timer1.Enabled = true;
             lblFecha.Text = DateTime.Now.ToShortDateString();
             panelMttoVhicular.Hide();
+            panelMttoVales.Visible = false;
+            panelMttoTraslado.Visible = false;
 
             this.UseWaitCursor = false;
             //this.Hide();
@@ -71,6 +73,8 @@ namespace wCWdrmApp
         private void btnMttoVehicular_Click(object sender, EventArgs e)
         {
             panelMttoVhicular.Visible = true;
+            panelMttoVales.Visible = false;
+            panelMttoTraslado.Visible = false;
         }
 
         private void btnVehiculo_Click(object sender, EventArgs e)
@@ -134,6 +138,28 @@ namespace wCWdrmApp
         private void btnMttoVehiculo_Click(object sender, EventArgs e)
         {
             frmBrwMttoVehiculo frm = new frmBrwMttoVehiculo(lblNombreUsuario.Text);
+
+            frm.Show();
+        }
+
+        private void btnValeViatico_Click(object sender, EventArgs e)
+        {
+            panelMttoVhicular.Visible = false;
+            panelMttoVales.Visible = true;
+            panelMttoTraslado.Visible = false;
+
+        }
+
+        private void btnTraslado_Click(object sender, EventArgs e)
+        {
+            panelMttoVhicular.Visible = false;
+            panelMttoVales.Visible = false;
+            panelMttoTraslado.Visible = true;
+        }
+
+        private void btnTraslados_Click(object sender, EventArgs e)
+        {
+            frmBitacora frm = new frmBitacora(lblNombreUsuario.Text);
 
             frm.Show();
         }

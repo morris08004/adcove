@@ -62,11 +62,19 @@ namespace wCWdrmApp
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.lblNombreEmpresa = new System.Windows.Forms.Label();
             this.lblArea = new System.Windows.Forms.Label();
+            this.panelMttoVales = new System.Windows.Forms.Panel();
+            this.btnVales = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.panelMttoTraslado = new System.Windows.Forms.Panel();
+            this.btnTraslados = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelMenuPrincipal.SuspendLayout();
             this.panelMenuAuxiliar.SuspendLayout();
             this.panelMttoVhicular.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelMttoVales.SuspendLayout();
+            this.panelMttoTraslado.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenuPrincipal
@@ -90,6 +98,7 @@ namespace wCWdrmApp
             this.btnTraslado.TabIndex = 2;
             this.btnTraslado.Text = "Traslado";
             this.btnTraslado.UseVisualStyleBackColor = true;
+            this.btnTraslado.Click += new System.EventHandler(this.btnTraslado_Click);
             // 
             // btnValeViatico
             // 
@@ -100,6 +109,7 @@ namespace wCWdrmApp
             this.btnValeViatico.TabIndex = 1;
             this.btnValeViatico.Text = "Vales y Víaticos";
             this.btnValeViatico.UseVisualStyleBackColor = true;
+            this.btnValeViatico.Click += new System.EventHandler(this.btnValeViatico_Click);
             // 
             // btnMttoVehicular
             // 
@@ -116,6 +126,8 @@ namespace wCWdrmApp
             // 
             this.panelMenuAuxiliar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMenuAuxiliar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panelMenuAuxiliar.Controls.Add(this.panelMttoTraslado);
+            this.panelMenuAuxiliar.Controls.Add(this.panelMttoVales);
             this.panelMenuAuxiliar.Controls.Add(this.panelMttoVhicular);
             this.panelMenuAuxiliar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.panelMenuAuxiliar.Location = new System.Drawing.Point(1058, 6);
@@ -399,6 +411,67 @@ namespace wCWdrmApp
             this.lblArea.TabIndex = 21;
             this.lblArea.Text = "RECURSOS MATERIALES";
             // 
+            // panelMttoVales
+            // 
+            this.panelMttoVales.Controls.Add(this.btnVales);
+            this.panelMttoVales.Controls.Add(this.button10);
+            this.panelMttoVales.Location = new System.Drawing.Point(4, 13);
+            this.panelMttoVales.Name = "panelMttoVales";
+            this.panelMttoVales.Size = new System.Drawing.Size(193, 933);
+            this.panelMttoVales.TabIndex = 22;
+            // 
+            // btnVales
+            // 
+            this.btnVales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnVales.Location = new System.Drawing.Point(35, 85);
+            this.btnVales.Name = "btnVales";
+            this.btnVales.Size = new System.Drawing.Size(128, 51);
+            this.btnVales.TabIndex = 9;
+            this.btnVales.Text = "Vales";
+            this.btnVales.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.button10.Location = new System.Drawing.Point(35, 5);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(128, 51);
+            this.button10.TabIndex = 0;
+            this.button10.Text = "Vehículo";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Visible = false;
+            // 
+            // panelMttoTraslado
+            // 
+            this.panelMttoTraslado.Controls.Add(this.btnTraslados);
+            this.panelMttoTraslado.Controls.Add(this.button2);
+            this.panelMttoTraslado.Location = new System.Drawing.Point(5, 13);
+            this.panelMttoTraslado.Name = "panelMttoTraslado";
+            this.panelMttoTraslado.Size = new System.Drawing.Size(189, 951);
+            this.panelMttoTraslado.TabIndex = 23;
+            // 
+            // btnTraslados
+            // 
+            this.btnTraslados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnTraslados.Location = new System.Drawing.Point(35, 85);
+            this.btnTraslados.Name = "btnTraslados";
+            this.btnTraslados.Size = new System.Drawing.Size(128, 51);
+            this.btnTraslados.TabIndex = 9;
+            this.btnTraslados.Text = "Traslado";
+            this.btnTraslados.UseVisualStyleBackColor = true;
+            this.btnTraslados.Click += new System.EventHandler(this.btnTraslados_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.button2.Location = new System.Drawing.Point(35, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 51);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Vehículo";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,6 +503,8 @@ namespace wCWdrmApp
             this.panelMttoVhicular.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelMttoVales.ResumeLayout(false);
+            this.panelMttoTraslado.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,6 +543,12 @@ namespace wCWdrmApp
         private System.Windows.Forms.Button btnMttoVehiculo;
         private System.Windows.Forms.Button btnNivel;
         private System.Windows.Forms.Button btnEstatus;
+        private System.Windows.Forms.Panel panelMttoVales;
+        private System.Windows.Forms.Button btnVales;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel panelMttoTraslado;
+        private System.Windows.Forms.Button btnTraslados;
+        private System.Windows.Forms.Button button2;
     }
 }
 
