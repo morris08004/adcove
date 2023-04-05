@@ -29,8 +29,8 @@ namespace wCWdrmApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenuPrincipal = new System.Windows.Forms.Panel();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -243,14 +243,14 @@ namespace wCWdrmApp
             this.dgvMtto.AllowUserToDeleteRows = false;
             this.dgvMtto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMtto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMtto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMtto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMtto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iIdMtto,
@@ -285,14 +285,14 @@ namespace wCWdrmApp
             this.dtRegistro,
             this.iHoraRegistro,
             this.cIdUsuario});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMtto.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMtto.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMtto.Location = new System.Drawing.Point(211, 4);
             this.dgvMtto.Name = "dgvMtto";
             this.dgvMtto.ReadOnly = true;
@@ -787,10 +787,10 @@ namespace wCWdrmApp
             this.tpResguardante.Controls.Add(this.lblTipoArrendamiento);
             this.tpResguardante.Controls.Add(this.lblObservaciones);
             this.tpResguardante.Controls.Add(this.txtcResponsable);
-            this.tpResguardante.Location = new System.Drawing.Point(4, 22);
+            this.tpResguardante.Location = new System.Drawing.Point(4, 29);
             this.tpResguardante.Name = "tpResguardante";
             this.tpResguardante.Padding = new System.Windows.Forms.Padding(3);
-            this.tpResguardante.Size = new System.Drawing.Size(740, 262);
+            this.tpResguardante.Size = new System.Drawing.Size(740, 255);
             this.tpResguardante.TabIndex = 1;
             this.tpResguardante.Text = "Resguardante";
             this.tpResguardante.UseVisualStyleBackColor = true;
@@ -1034,9 +1034,9 @@ namespace wCWdrmApp
             this.tpConductor.Controls.Add(this.cmbTaller);
             this.tpConductor.Controls.Add(this.label7);
             this.tpConductor.Controls.Add(this.txtcResponsableTaller);
-            this.tpConductor.Location = new System.Drawing.Point(4, 22);
+            this.tpConductor.Location = new System.Drawing.Point(4, 29);
             this.tpConductor.Name = "tpConductor";
-            this.tpConductor.Size = new System.Drawing.Size(740, 262);
+            this.tpConductor.Size = new System.Drawing.Size(740, 255);
             this.tpConductor.TabIndex = 2;
             this.tpConductor.Text = "Conductor";
             this.tpConductor.UseVisualStyleBackColor = true;

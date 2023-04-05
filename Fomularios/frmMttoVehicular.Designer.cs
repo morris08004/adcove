@@ -287,7 +287,7 @@ namespace wCWdrmApp
             // 
             this.lblArea.AutoSize = true;
             this.lblArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.lblArea.Location = new System.Drawing.Point(81, 110);
+            this.lblArea.Location = new System.Drawing.Point(80, 110);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(50, 24);
             this.lblArea.TabIndex = 0;

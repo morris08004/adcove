@@ -469,6 +469,5 @@ namespace wCWdrmApp
                 con.Close();
             }
         } // dameArea
-
     }
 }

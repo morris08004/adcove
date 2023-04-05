@@ -162,17 +162,23 @@
     <Compile Include="Fomularios\frmMttoVehicular.Designer.cs">
       <DependentUpon>frmMttoVehicular.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBitacora.cs">
+    <Compile Include="Fomularios\frmBitacora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBitacora.Designer.cs">
+    <Compile Include="Fomularios\frmBitacora.Designer.cs">
       <DependentUpon>frmBitacora.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBrwMttoVehiculo.cs">
+    <Compile Include="Fomularios\frmBrwMttoVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBrwMttoVehiculo.Designer.cs">
+    <Compile Include="Fomularios\frmBrwMttoVehiculo.Designer.cs">
       <DependentUpon>frmBrwMttoVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fomularios\frmMttoBitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fomularios\frmMttoBitacora.Designer.cs">
+      <DependentUpon>frmMttoBitacora.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,11 +215,14 @@
     <EmbeddedResource Include="Fomularios\frmMttoVehicular.resx">
       <DependentUpon>frmMttoVehicular.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBitacora.resx">
+    <EmbeddedResource Include="Fomularios\frmBitacora.resx">
       <DependentUpon>frmBitacora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBrwMttoVehiculo.resx">
+    <EmbeddedResource Include="Fomularios\frmBrwMttoVehiculo.resx">
       <DependentUpon>frmBrwMttoVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fomularios\frmMttoBitacora.resx">
+      <DependentUpon>frmMttoBitacora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -15,10 +15,14 @@ namespace wCWdrmApp
     {
         private Conexion mConexion;
         private string pcAccion = "";
+        private string vcUsuario;
 
         public frmBitacora( string pcUsuario)
         {
             InitializeComponent();
+
+            vcUsuario = pcUsuario;
+
             estadoObjeto(false);
             mConexion = new Conexion();
             poblarBrowse(dgvBitacora);
@@ -83,5 +87,61 @@ namespace wCWdrmApp
             }
         } // poblarBrowse
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            //Obtienes la fila actual
+            //var row = (sender as DataGridView).CurrentRow;
+            int viFolio = 0;
+            frmMttoBitacora frm = new frmMttoBitacora("N", viFolio, vcUsuario);
+            frm.ShowDialog();
+
+            poblarBrowse(dgvBitacora);
+
+            
+        } // btnNuevo
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            //Obtienes la fila actual
+            //var row = (sender as DataGridView).CurrentRow;
+            int viFolio = 0;
+
+            if (!string.IsNullOrEmpty(dgvBitacora.CurrentRow.Cells[0].Value.ToString()))
+            {
+                viFolio = Convert.ToInt32(dgvBitacora.CurrentRow.Cells[0].Value.ToString());
+            }
+            else
+            {
+                viFolio = 0;
+            }
+
+
+            frmMttoBitacora frm = new frmMttoBitacora("E", viFolio, vcUsuario);
+            frm.ShowDialog();
+
+            poblarBrowse(dgvBitacora);
+
+            
+        } // btnEditar
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            //Obtienes la fila actual
+            //var row = (sender as DataGridView).CurrentRow;
+            int viFolio = 0;
+
+            if (!string.IsNullOrEmpty(dgvBitacora.CurrentRow.Cells[0].Value.ToString()))
+            {
+                viFolio = Convert.ToInt32(dgvBitacora.CurrentRow.Cells[0].Value.ToString());
+            }
+            else
+            {
+                viFolio = 0;
+            }
+
+            frmMttoVehicular frm = new frmMttoVehicular("B", viFolio, vcUsuario);
+            frm.ShowDialog();
+
+        } // btnBorrar
     }
 }

@@ -29,8 +29,8 @@ namespace wCWdrmApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenuPrincipal = new System.Windows.Forms.Panel();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -40,6 +40,12 @@ namespace wCWdrmApp
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.dgvBitacora = new System.Windows.Forms.DataGridView();
+            this.iIdBitacora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtBitacora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBitacoraDetalle = new System.Windows.Forms.DataGridView();
             this.iIdBitacoraDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iLinea = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,12 +63,6 @@ namespace wCWdrmApp
             this.iFolioViatico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtRegistroDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIdUsuarioDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iIdBitacora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtBitacora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cIdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMenuPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBitacora)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBitacoraDetalle)).BeginInit();
@@ -134,6 +134,7 @@ namespace wCWdrmApp
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnEditar
             // 
@@ -144,6 +145,7 @@ namespace wCWdrmApp
             this.btnEditar.TabIndex = 1;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -154,6 +156,7 @@ namespace wCWdrmApp
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // dgvBitacora
             // 
@@ -161,14 +164,14 @@ namespace wCWdrmApp
             this.dgvBitacora.AllowUserToDeleteRows = false;
             this.dgvBitacora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBitacora.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBitacora.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvBitacora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBitacora.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iIdBitacora,
@@ -177,20 +180,63 @@ namespace wCWdrmApp
             this.cObservaciones,
             this.dtRegistro,
             this.cIdUsuario});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBitacora.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBitacora.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBitacora.Location = new System.Drawing.Point(205, 3);
             this.dgvBitacora.Name = "dgvBitacora";
             this.dgvBitacora.ReadOnly = true;
             this.dgvBitacora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBitacora.Size = new System.Drawing.Size(749, 292);
             this.dgvBitacora.TabIndex = 2;
+            // 
+            // iIdBitacora
+            // 
+            this.iIdBitacora.DataPropertyName = "iIdBitacora";
+            this.iIdBitacora.HeaderText = "Bitacora #";
+            this.iIdBitacora.Name = "iIdBitacora";
+            this.iIdBitacora.ReadOnly = true;
+            // 
+            // iArea
+            // 
+            this.iArea.DataPropertyName = "iArea";
+            this.iArea.HeaderText = "Area #";
+            this.iArea.Name = "iArea";
+            this.iArea.ReadOnly = true;
+            // 
+            // dtBitacora
+            // 
+            this.dtBitacora.DataPropertyName = "dtBitacora";
+            this.dtBitacora.HeaderText = "Fecha";
+            this.dtBitacora.Name = "dtBitacora";
+            this.dtBitacora.ReadOnly = true;
+            // 
+            // cObservaciones
+            // 
+            this.cObservaciones.DataPropertyName = "cObservaciones";
+            this.cObservaciones.HeaderText = "Observaciones";
+            this.cObservaciones.Name = "cObservaciones";
+            this.cObservaciones.ReadOnly = true;
+            this.cObservaciones.Width = 200;
+            // 
+            // dtRegistro
+            // 
+            this.dtRegistro.DataPropertyName = "dtRegistro";
+            this.dtRegistro.HeaderText = "Fecha Registro";
+            this.dtRegistro.Name = "dtRegistro";
+            this.dtRegistro.ReadOnly = true;
+            // 
+            // cIdUsuario
+            // 
+            this.cIdUsuario.DataPropertyName = "cIdUsuario";
+            this.cIdUsuario.HeaderText = "Usuario";
+            this.cIdUsuario.Name = "cIdUsuario";
+            this.cIdUsuario.ReadOnly = true;
             // 
             // dgvBitacoraDetalle
             // 
@@ -314,49 +360,6 @@ namespace wCWdrmApp
             this.cIdUsuarioDetalle.DataPropertyName = "cIdUsuario";
             this.cIdUsuarioDetalle.HeaderText = "Usuario";
             this.cIdUsuarioDetalle.Name = "cIdUsuarioDetalle";
-            // 
-            // iIdBitacora
-            // 
-            this.iIdBitacora.DataPropertyName = "iIdBitacora";
-            this.iIdBitacora.HeaderText = "Bitacora #";
-            this.iIdBitacora.Name = "iIdBitacora";
-            this.iIdBitacora.ReadOnly = true;
-            // 
-            // iArea
-            // 
-            this.iArea.DataPropertyName = "iArea";
-            this.iArea.HeaderText = "Area #";
-            this.iArea.Name = "iArea";
-            this.iArea.ReadOnly = true;
-            // 
-            // dtBitacora
-            // 
-            this.dtBitacora.DataPropertyName = "dtBitacora";
-            this.dtBitacora.HeaderText = "Fecha";
-            this.dtBitacora.Name = "dtBitacora";
-            this.dtBitacora.ReadOnly = true;
-            // 
-            // cObservaciones
-            // 
-            this.cObservaciones.DataPropertyName = "cObservaciones";
-            this.cObservaciones.HeaderText = "Observaciones";
-            this.cObservaciones.Name = "cObservaciones";
-            this.cObservaciones.ReadOnly = true;
-            this.cObservaciones.Width = 200;
-            // 
-            // dtRegistro
-            // 
-            this.dtRegistro.DataPropertyName = "dtRegistro";
-            this.dtRegistro.HeaderText = "Fecha Registro";
-            this.dtRegistro.Name = "dtRegistro";
-            this.dtRegistro.ReadOnly = true;
-            // 
-            // cIdUsuario
-            // 
-            this.cIdUsuario.DataPropertyName = "cIdUsuario";
-            this.cIdUsuario.HeaderText = "Usuario";
-            this.cIdUsuario.Name = "cIdUsuario";
-            this.cIdUsuario.ReadOnly = true;
             // 
             // frmBitacora
             // 
